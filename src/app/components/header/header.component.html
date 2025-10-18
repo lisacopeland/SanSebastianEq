@@ -15,9 +15,8 @@
     <!-- Nav Links (Desktop) -->
     <nav class="hidden md:flex space-x-6">
       <a routerLink="/" routerLinkActive="text-yellow-400" class="hover:text-yellow-400">Home</a>
-      <a routerLink="/about" routerLinkActive="text-yellow-400" class="hover:text-yellow-400">About</a>
       <a routerLink="/services" routerLinkActive="text-yellow-400" class="hover:text-yellow-400">Services</a>
-      <a routerLink="/location" routerLinkActive="text-yellow-400" class="hover:text-yellow-400">Location</a>
+      <a routerLink="/gallery" routerLinkActive="text-yellow-400" class="hover:text-yellow-400">Gallery</a>
       <a routerLink="/contact" routerLinkActive="text-yellow-400" class="hover:text-yellow-400">Contact</a>
     </nav>
   </div>
@@ -26,12 +25,10 @@
   <div class="md:hidden px-4 pb-4" *ngIf="isMenuOpen">
     <nav class="flex flex-col space-y-2">
       <a routerLink="/" (click)="closeMenu()" routerLinkActive="text-yellow-400" class="hover:text-yellow-400">Home</a>
-      <a routerLink="/about" (click)="closeMenu()" routerLinkActive="text-yellow-400"
-        class="hover:text-yellow-400">About</a>
       <a routerLink="/services" (click)="closeMenu()" routerLinkActive="text-yellow-400"
         class="hover:text-yellow-400">Services</a>
-      <a routerLink="/location" (click)="closeMenu()" routerLinkActive="text-yellow-400"
-        class="hover:text-yellow-400">Location</a>
+      <a routerLink="/gallery" (click)="closeMenu()" routerLinkActive="text-yellow-400"
+        class="hover:text-yellow-400">Gallery</a>
       <a routerLink="/contact" (click)="closeMenu()" routerLinkActive="text-yellow-400"
         class="hover:text-yellow-400">Contact</a>
     </nav>

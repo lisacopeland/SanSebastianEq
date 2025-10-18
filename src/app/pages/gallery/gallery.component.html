@@ -1,0 +1,22 @@
+<section class="relative min-h-[calc(100vh-116px)] text-white">
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('/assets/homepage-background.jpg')">
+  </div>
+  <div class="absolute inset-0 bg-black/60"></div>
+
+  <div class="relative mx-auto max-w-7xl px-4 py-10 md:py-14">
+    <h1 class="text-3xl md:text-4xl font-extrabold text-center mb-6">Gallery</h1>
+
+    <swiper-container class="rounded-2xl overflow-hidden ring-1 ring-white/10 bg-black/30 backdrop-blur-md block"
+      slides-per-view="1" space-between="16" loop="true" navigation="true" pagination="true" keyboard="true"
+      autoplay-delay="4000" autoplay-disable-on-interaction="false">
+      <swiper-slide *ngFor="let p of photos">
+        <figure class="relative">
+          <img [src]="p.src" [alt]="p.alt" loading="lazy" class="w-full h-[56vh] md:h-[64vh] object-cover" />
+          <figcaption class="absolute bottom-0 left-0 right-0 bg-black/45 px-4 py-3 text-sm md:text-base">
+            {{ p.alt }}
+          </figcaption>
+        </figure>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+</section>
