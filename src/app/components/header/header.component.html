@@ -14,23 +14,28 @@
 
     <!-- Nav Links (Desktop) -->
     <nav class="hidden md:flex space-x-6">
-      <a routerLink="/" routerLinkActive="text-yellow-400" class="hover:text-yellow-400">Home</a>
-      <a routerLink="/services" routerLinkActive="text-yellow-400" class="hover:text-yellow-400">Services</a>
-      <a routerLink="/gallery" routerLinkActive="text-yellow-400" class="hover:text-yellow-400">Gallery</a>
-      <a routerLink="/contact" routerLinkActive="text-yellow-400" class="hover:text-yellow-400">Contact</a>
+      <a routerLink="/" #rlaSvc="routerLinkActive" routerLinkActive="is-active"
+        [ngClass]="rlaSvc.isActive ? 'text-white' : 'text-yellow-400'" class="hover:text-yellow-400">Home</a>
+      <a routerLink="/services" #rlaSvc="routerLinkActive" routerLinkActive="is-active"
+        [ngClass]="rlaSvc.isActive ? 'text-white`' : 'text-yellow-400'" class="hover:text-yellow-400">Services</a>
+      <a routerLink="/gallery" #rlaSvc="routerLinkActive" routerLinkActive="is-active"
+        [ngClass]="rlaSvc.isActive ? 'text-white' : 'text-yellow-400'" class="hover:text-yellow-400">Gallery</a>
+      <a routerLink="/contact" #rlaSvc="routerLinkActive" routerLinkActive="is-active"
+        [ngClass]="rlaSvc.isActive ? 'text-white' : 'text-yellow-400'" class="hover:text-yellow-400">Contact</a>
     </nav>
   </div>
 
   <!-- Mobile Menu -->
   <div class="md:hidden px-4 pb-4" *ngIf="isMenuOpen">
     <nav class="flex flex-col space-y-2">
-      <a routerLink="/" (click)="closeMenu()" routerLinkActive="text-yellow-400" class="hover:text-yellow-400">Home</a>
-      <a routerLink="/services" (click)="closeMenu()" routerLinkActive="text-yellow-400"
-        class="hover:text-yellow-400">Services</a>
-      <a routerLink="/gallery" (click)="closeMenu()" routerLinkActive="text-yellow-400"
-        class="hover:text-yellow-400">Gallery</a>
-      <a routerLink="/contact" (click)="closeMenu()" routerLinkActive="text-yellow-400"
-        class="hover:text-yellow-400">Contact</a>
+      <a routerLink="/" (click)="closeMenu()" #rlaSvc="routerLinkActive" routerLinkActive="is-active"
+        [ngClass]="rlaSvc.isActive ? 'text-white' : 'text-yellow-400'" class="hover:text-yellow-400">Home</a>
+      <a routerLink="/services" (click)="closeMenu()" #rlaSvc="routerLinkActive" routerLinkActive="is-active"
+        [ngClass]="rlaSvc.isActive ? 'text-white' : 'text-yellow-400'" class="hover:text-yellow-400">Services</a>
+      <a routerLink="/gallery" (click)="closeMenu()" #rlaSvc="routerLinkActive" routerLinkActive="is-active"
+        [ngClass]="rlaSvc.isActive ? 'text-white' : 'text-yellow-400'" class="hover:text-yellow-400">Gallery</a>
+      <a routerLink="/contact" (click)="closeMenu()" #rlaSvc="routerLinkActive" routerLinkActive="is-active"
+        [ngClass]="rlaSvc.isActive ? 'text-white' : 'text-yellow-400'" class="hover:text-yellow-400">Contact</a>
     </nav>
   </div>
 </header>
